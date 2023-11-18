@@ -1,0 +1,40 @@
+import React from 'react';
+import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import { varFadeInRight } from '../animations';
+
+export default function JoinCommunitySection() {
+  return (
+    <Box sx={{ background: 'url(/assets/images/community.jpg)', backgroundSize: 'cover', backgroundPositionY: 'center' }} py={{ xs: 5, md: 10 }}>
+      <Container maxWidth="lg">
+        <Grid container columns={2}>
+          <Grid item md={1}>
+            <Stack spacing={2}>
+              <Typography
+                color="white"
+                fontSize={{ xs: 24, sm: 36, md: 48 }}
+                fontWeight={900}
+                textAlign={{ xs: 'center', md: 'left' }}
+              >Join the community</Typography>
+              <Typography
+                color="white"
+                fontSize={{ xs: 14, sm: 18 }}
+                lineHeight={{ xs: 1.5, sm: 2 }}
+                textAlign={{ xs: 'center', md: 'left' }}
+              >
+                MekaVerse Discord already has over 200,000 members! If you want to join the #MEKAGANG it’s here. Join us to get the news as soon as possible and follow our latest announcements.
+              </Typography>
+              <motion.div variants={varFadeInRight}>
+                <Stack direction="row" justifyContent={{ xs: 'center', md: 'start' }}>
+                  <Button variant="contained" sx={{ borderRadius: 0, fontSize: { xs: 14, sm: 18 }, py: 1, px: 3 }}>
+                    Join our Discord
+                  </Button>
+                </Stack>
+              </motion.div>
+            </Stack>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box >
+  );
+}
